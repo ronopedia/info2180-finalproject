@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title> BugMe Issue Tracker</title>
+        <script type="text/javascript" src="scripts/login_validation.js"></script>
+		<link rel="stylesheet" href="styles/login.css">
+	</head>
+    <body>
+    <header>
+        <div class="header-container"> 
+            <img src="bugicon.png" alt="a bug" class="bug">
+
+		    <h1>BugMe Issue Tracker Login</h1>
+        </div>
+	</header>
+    <br><br>
+    <div class="form-layout">
+        <form method="POST" action="scripts/login.php" >
+            <div class="form-container">
+                <label for= "email"> Username </label>
+                <input type="email" placeholder="Email Address" name="email" id="email" required>
+                <br>
+                <label for= "password"> Password </label>
+                <input type="password" placeholder="Password" name="password" id="password" required>
+                <br>
+                <div class="bttn">
+                <button type="submit" name="login" id="login">Login</button>
+                </div>
+            </div> 
+        </form>
+    </div>
+    </body>
+</html>

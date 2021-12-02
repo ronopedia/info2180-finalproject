@@ -64,7 +64,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `password`, `email`, `date_joined`) VALUES
-(100000001, 'Timmy', 'Turner', '$2y$10$CUSo4FIJEezh7KGoOg1XCOeUUhNfmenvm4ggcx2VDksNfbx82G7Qq', 'admin@project2.com', '2019-02-14 12:24:42'),
+(100000001, 'Timmy', 'Turner', '$2y$10$8YnX7zS29CVEJyGipkDO1OGZKSJ6iLlMatVm3tzDZUIvjSbAdVxOS', 'admin@project2.com', '2019-02-14 12:24:42'),
 
 --
 -- Dumping data for table `issues`

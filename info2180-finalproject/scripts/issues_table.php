@@ -21,7 +21,7 @@ try{
             $date1 = $datetime->format('Y-m-d');
             echo '<tr>';
             echo '<td>'.$row['title'].'</td>';
-            echo '<td class="typeof">'.$row['type'].'</td>';
+            echo '<td class="type">'.$row['type'].'</td>';
             echo '<td   class="status">'.$row['status'].'</td>';
             echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
             echo '<td>'.$date1.'</td>';
@@ -39,12 +39,12 @@ try{
         echo '<th>Created</th>';
         echo '</tr>';
         foreach($results as $row){
-            if($row['status']=="open"){
+            if($row['status']=="Open"){
                 $datetime = new DateTime($row['created']);
                 $date1 = $datetime->format('Y-m-d');
                 echo '<tr>';
                 echo '<td>'.$row['title'].'</td>';
-                echo '<td class="typeof">'.$row['type'].'</td>';
+                echo '<td class="type">'.$row['type'].'</td>';
                 echo '<td   class="status">'.$row['status'].'</td>';
                 echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
                 echo '<td>'.$date1.'</td>';
@@ -63,12 +63,12 @@ try{
         echo '<th>Created</th>';
         echo '</tr>';
         foreach($results as $row){
-            if($row['id']==2){
+            if($row['id']==100000001){ //only shows tickets of the admin user in database
                 $datetime = new DateTime($row['created']);
                 $date1 = $datetime->format('Y-m-d');
                 echo '<tr>';
                 echo '<td>'.$row['title'].'</td>';
-                echo '<td class="typeof">'.$row['type'].'</td>';
+                echo '<td class="type">'.$row['type'].'</td>';
                 echo '<td  class="status">'.$row['status'].'</td>';
                 echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
                 echo '<td>'.$date1.'</td>';

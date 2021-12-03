@@ -49,5 +49,5 @@ require_once 'connectdb.php';
     header("Location: $referer");
     exit;
 
-}
+
 ?>

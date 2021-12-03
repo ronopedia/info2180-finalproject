@@ -18,13 +18,13 @@
 	</header>
     <br><br>
     <div class="form-layout">
-        <form method="POST" action="scripts/login.php" >
+        <form method="POST" onsubmit="validateForm()" action="scripts/login.php" >
             <div class="form-container">
-                <label for= "email"> Username </label>
-                <input type="email" placeholder="Email Address" name="email" id="email" required>
+                <label> Username </label>
+                <input type="email" placeholder="Email Address" name="email" id="email" >
                 <br>
-                <label for= "password"> Password </label>
-                <input type="password" placeholder="Password" name="password" id="password" required>
+                <label> Password </label>
+                <input type="password" placeholder="Password" name="password" id="password" >
                 <br>
                 <div class="bttn">
                 <button type="submit" name="login" id="login">Login</button>

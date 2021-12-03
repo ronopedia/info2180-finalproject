@@ -28,7 +28,8 @@ session_start();
     if(isset($_POST["login"])){
        echo('<h3>Welcome '.$_SESSION['firstname'].'</h3>');
     }else{
-      echo('User is not logged in. Guest mode.');
+      //header('location: ../login.html');  //uncomment to not see home.php without login
+      echo('User is not logged in. Guest mode.'); 
     }?>
       
   </div>
@@ -50,9 +51,9 @@ session_start();
         </div>
         <div class='filter'>
           <h4>Filter By:</h4>
-          <button>ALL</button>
-          <button>OPEN</button>
-          <button>MY TICKETS</button>
+          <button name='all'>ALL</button>
+          <button name='open'>OPEN</button>
+          <button name='mytickets'>MY TICKETS</button>
         </div>
         <div id="result">
           <table>

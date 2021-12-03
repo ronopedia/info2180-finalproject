@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -23,14 +22,8 @@ session_start();
 
   </div>
   <div class="header">
-    <h1><i class="material-icons"> bug_report</i>BugMe Issue Tracker</h1>
-    <?php 
-    if(isset($_POST["login"])){
-       echo('<h3>Welcome '.$_SESSION['firstname'].'</h3>');
-    }else{
-      //header('location: ../login.html');  //uncomment to not see home.php without login
-      echo('User is not logged in. Guest mode.'); 
-    }?>
+  <h1><i class="material-icons"> bug_report</i>BugMe Issue Tracker</h1>
+    <?php echo('<h3>Welcome '.$_SESSION['firstname'].'</h3>') ?>
       
   </div>
   <div class='container'>

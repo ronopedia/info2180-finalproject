@@ -1,13 +1,12 @@
 <?php
 
 require_once 'connectdb.php';
-
     $firstname = $_POST['firstname'];
     $sanitizedFirstName = filter_var($firstname, FILTER_SANITIZE_STRING	);
     $lastname = $_POST['lastname'];
-    $sanitizedLastName = filter_var($lastname, FILTER_SANITIZE_STRING	);
+    $sanitizedLastName = filter_var($lastname, FILTER_SANITIZE_STRING);
     $password = $_POST['pass'];
-    $sanitizedPassword = filter_var($password, FILTER_SANITIZE_STRING	);
+    $sanitizedPassword = filter_var($password, FILTER_SANITIZE_STRING);
     $email = $_POST['email'];
     $sanitizedEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
 

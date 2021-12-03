@@ -1,16 +1,21 @@
 <?php
 session_start();
-
 require_once 'connectdb.php';
 
-if(isset($_POST["login"])) {
-    if ($_POST['email'] != '' && $_POST['password'] != ''){
-            $query = "SELECT * from `users` where `email`=:email";
+if(isset($_POST['login'])) {
+    
+    if (empty($_POST['email']) || empty($_POST['password'])){
 
-            $sql = $conn->prepare($query);
-            $sql->execute(
-                array(
-                    'email' => $_POST['email'],
+        $errorMsg = '<label style="color: red ;"> Please complete All fields. </label>';
+
+    }else{
+        $query = "SELECT * FROM users WHERE 'email' = :email AND 'password' = :password";
+
+        $sql = $conn->prepare($query);
+        $sql->execute(
+            array(
+                'email' => $_POST['email'],
+                'password'=> $_POST['password']
                 )
             );
             $count = $sql->rowCount();
@@ -21,16 +26,18 @@ if(isset($_POST["login"])) {
                 $_SESSION['email'] = $_POST['email'];
                 $_SESSION['id'] = $data['id'];
                 $_SESSION['firstname'] = $data['firstname'];
-                header('location:home.php');
-                $logg = $_SESSION['id'];
+                header('location: home.php');
+        
             }
             else{
+                //header('location: ../login.html');
                 $errorMsg = '<label style="color: orange ;"> Invalid email or password! Try again.</label>';
+                
+
             }
 
-        }
-
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,12 +59,12 @@ if(isset($_POST["login"])) {
         </div>
 		</header>
         <div class="form-layout">
-        <form method="POST" onsubmit="return validateForm()"></form>
+        <form method="POST" onsubmit="validateForm()" action="scripts/login.php" ></form>
             <div class="form-container">
-                <label for= "email"> Username </label>
+                <label> Username </label>
                 <input type="email" placeholder="Email Address" name="email" id="email" required>
                 <br>
-                <label for= "password"> Password </label>
+                <label> Password </label>
                 <input type="password" placeholder="Password" name="password" id="password" required>
 
                 <?php
@@ -67,11 +74,10 @@ if(isset($_POST["login"])) {
                 ?>
                 <br>
                 <div class="bttn">
-                <button type="submit" name="submit_form" id="submit_form">Login</button>
+                <button type="submit" name="login" id="login">Login</button>
                 </div>
             </div>
         </form>
         </div>
     </body>
-
 </html>

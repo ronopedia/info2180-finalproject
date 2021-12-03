@@ -23,7 +23,7 @@ session_start();
   </div>
   <div class="header">
   <h1><i class="material-icons"> bug_report</i>BugMe Issue Tracker</h1>
-    <?php echo('<h3>Welcome '.$_SESSION['firstname'].'</h3>') ?>
+    <?php echo('<h3>Welcome '.$_SESSION['firstname'].',</h3>') ?>
       
   </div>
   <div class='container'>

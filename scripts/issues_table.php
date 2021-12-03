@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'dbconfig.php';
 
 
@@ -63,7 +64,7 @@ try{
         echo '<th>Created</th>';
         echo '</tr>';
         foreach($results as $row){
-            if($row['id']==100000001){ //only shows tickets of the admin user in database
+            if($row['id']==$_SESSION['id']){ 
                 $datetime = new DateTime($row['created']);
                 $date1 = $datetime->format('Y-m-d');
                 echo '<tr>';

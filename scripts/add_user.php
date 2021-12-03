@@ -43,7 +43,7 @@ require_once 'connectdb.php';
     }
 
     $sql = "INSERT into users(firstname,lastname,password,email,date_joined)
-    VALUES ('$sanitizedFirstName','$sanitizedLastName','$hashed_password','$sanitizedEmail',NOW())";
+    VALUES ('$sanitizedFirstName','$sanitizedLastName','$sanitizedPassword','$sanitizedEmail',NOW())";
     $conn->exec($sql);
     $referer = $_SERVER['HTTP_REFERER'];
     header("Location: $referer");

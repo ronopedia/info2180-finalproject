@@ -1,0 +1,43 @@
+input {
+    display: block;
+    grid-area: search;
+    height: 25px;
+    width: 100%
+}
+
+.form-layout {
+    display: flex;
+    justify-content: center;
+}
+
+.bttn{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.header-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+img.bug {
+  text-align:center;
+  width: 100px;
+  border-radius: 30%;
+}
+
+body {
+    display: block ;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    justify-content: center;
+    background-color: rgba(63, 84, 102, 0.7);
+    
+}
+
+h1{
+    text-align: center;
+    color: rgb(239, 245, 239);
+}

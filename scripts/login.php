@@ -1,5 +1,4 @@
 <?php
-//User is not able to login. The password and email address does not match. Password should be 'password123' for 'admin@project2.com
 session_start(); // 
 require_once 'connectdb.php';
 
